@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Job<span>Finder</span></div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#jobs">Jobs</a>
+        <a href="#saved">Saved Jobs</a>
+    </nav>
+</header>
+
+
+<section class="hero">
+
+    <h1>Find Your Dream Job</h1>
+
+    <p>Search and discover opportunities that match your skills.</p>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search job title or company..."
+        >
+
+        <select id="locationFilter">
+            <option value="all">All Locations</option>
+            <option value="Remote">Remote</option>
+            <option value="Indore">Indore</option>
+            <option value="Bhopal">Bhopal</option>
+            <option value="Delhi">Delhi</option>
+        </select>
+
+        <select id="typeFilter">
+            <option value="all">All Types</option>
+            <option value="Full Time">Full Time</option>
+            <option value="Part Time">Part Time</option>
+            <option value="Internship">Internship</option>
+        </select>
+
+        <button onclick="filterJobs()">Search</button>
+
+    </div>
+
+</section>
+
+
+<main id="jobs">
+
+    <div class="job-header">
+        <h2>Available Jobs</h2>
+        <span id="jobCount"></span>
+    </div>
+
+    <div id="jobContainer" class="job-container"></div>
+
+</main>
+
+
+<section id="saved" class="saved-section">
+
+    <h2>⭐ Saved Jobs</h2>
+
+    <div id="savedJobs"></div>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
